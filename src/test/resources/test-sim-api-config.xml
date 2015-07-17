@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <mappings>
+        <mapping uri="/enterprise/someapi" reject-type="REJECT" throuput-in-min="300" filename="response/api1.xml">
+            <latencies>
+                <latency percent="50" timems="30"></latency>
+                <latency percent="30" timems="50"></latency>
+                <latency percent="15" timems="70"></latency>
+                <latency percent="5" timems="100"></latency>
+            </latencies>
+        </mapping>
+        <mapping uri="/enterprise/someapi20" reject-type="WAIT" throuput-in-min="100" filename="response/api2">
+            <latencies>
+                <latency percent="50" timems="30"></latency>
+                <latency percent="30" timems="50"></latency>
+                <latency percent="5" timems="100"></latency>
+            </latencies>
+        </mapping>
+        <mapping uri="/enterprise2" reject-type="WAIT" throuput-in-min="100" filename="response/api2">
+            <latencies>
+                <latency percent="100" timems="30"></latency>
+            </latencies>
+        </mapping>
+        <mapping uri="/enterprise3" reject-type="WAIT" throuput-in-min="100" filename="response/api2">
+            <latencies>
+                <latency percent="100" timems="30"></latency>
+                <latency percent="0" timems="70"></latency>
+            </latencies>
+        </mapping>
+        <mapping uri="/enterprise4" reject-type="WAIT" throuput-in-min="100" filename="response/api2">
+            <latencies>
+                <latency percent="100" timems="0"></latency>
+            </latencies>
+        </mapping>
+        <mapping uri="/enterprise_throuput" reject-type="REJECT" throuput-in-min="0" filename="response/api2">
+            <latencies>
+                <latency percent="100" timems="0"></latency>
+            </latencies>
+        </mapping>
+    </mappings>
+</configuration>

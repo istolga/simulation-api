@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <mappings>
+        <mapping uri="/public/v7/users/1234" reject-type="REJECT" throuput-in-min="1800" filename="response/user1234.xml">
+            <latencies>
+                <latency percent="12" timems="16"></latency>
+                <latency percent="38" timems="401"></latency>
+                <latency percent="33" timems="873"></latency>
+                <latency percent="7" timems="1535"></latency>
+                <latency percent="141" timems="1897"></latency>
+                <latency percent="127" timems="2332"></latency>
+                <latency percent="57" timems="2803"></latency>
+                <latency percent="19" timems="3284"></latency>
+                <latency percent="7" timems="3706"></latency>
+                <latency percent="4" timems="4395"></latency>
+                <latency percent="2" timems="4976"></latency>
+            </latencies>
+        </mapping>
+        <mapping uri="/private/v4/users/all" reject-type="REJECT" throuput-in-min="1800" filename="response/all-users.json">
+            <latencies>
+                <latency percent="12" timems="10"></latency>
+                <latency percent="4" timems="1067"></latency>
+                <latency percent="125" timems="1371"></latency>
+                <latency percent="50" timems="1760"></latency>
+                <latency percent="9" timems="2241"></latency>
+                <latency percent="1" timems="3273"></latency>
+            </latencies>
+        </mapping>
+        <mapping uri="/private/v4/users/allwait" reject-type="WAIT" throuput-in-min="1800" filename="response/all-users.json">
+            <latencies>
+                <latency percent="11" timems="17"></latency>
+                <latency percent="3" timems="1061"></latency>
+                <latency percent="130" timems="1377"></latency>
+                <latency percent="52" timems="1795"></latency>
+                <latency percent="11" timems="2248"></latency>
+                <latency percent="3" timems="2831"></latency>
+                <latency percent="1" timems="3168"></latency>
+                <latency percent="8" timems="8487"></latency>
+            </latencies>
+        </mapping>
+    </mappings>
+</configuration>
