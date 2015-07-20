@@ -1,12 +1,10 @@
-simulation-api
-==========================
+# simulation-api
 
 Api simulation framework on top of Netty 4 (NIO client server framework) and Spring framework.
 
 The goal is to simulate slow responding third party apis. 
 
-Usage
-==========================
+## Usage
 Each api is configured in resources/sim-api-config.xml
 
 If there is splunk(or other log system) results for api latencies use the following splunk query(last month):
@@ -17,8 +15,7 @@ take 10-15 buckets and then:
 
        users/1234 | stats count by tet | rangemap field=tet 1=0-50 2=51-100 3=101-600 4=601-1100 5=1101-1600 6=1601-2100 7=2101-2600 8=2601-3100 9=3101-3600 10=3601-4200 11=4201-4700 default=12 | stats avg(tet), count by range
 
-Details
-==========================
+## Details
 Configuration is done by the following:
 
      <mapping uri="/public/v7/users/1234" reject-type="REJECT" throuput-in-min="1800" filename="response/user1234.xml">
